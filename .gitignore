@@ -5,3 +5,4 @@ build/
 local.properties
 android/.gradle/
 android/app/build/
+docs/rea/*-evidence.json
