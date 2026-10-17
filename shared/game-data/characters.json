@@ -1,0 +1,18 @@
+{
+  "$comment": "Original character definitions. Clients render these procedurally from the palette, so no image assets are required and nothing is copied from another game.",
+  "version": 1,
+  "characters": [
+    { "id": "recruit",   "name": "Recruit",   "unlock": "default", "twitch": 1.00, "build": 1.00, "palette": { "skin": "#f0c9a4", "torso": "#3f7fd6", "limbs": "#2b5aa0", "accent": "#ffd166", "outline": "#0d1420" } },
+    { "id": "scout",     "name": "Scout",     "unlock": "default", "twitch": 1.12, "build": 0.94, "palette": { "skin": "#e8b98c", "torso": "#3ec9a7", "limbs": "#22907a", "accent": "#f7fff7", "outline": "#0d1420" } },
+    { "id": "heavy",     "name": "Heavy",     "unlock": "default", "twitch": 0.90, "build": 1.12, "palette": { "skin": "#d8a271", "torso": "#c1554b", "limbs": "#8c3a33", "accent": "#ffd166", "outline": "#0d1420" } },
+    { "id": "medic",     "name": "Medic",     "unlock": "default", "twitch": 1.00, "build": 0.98, "palette": { "skin": "#f2cfa9", "torso": "#e9eef5", "limbs": "#b8c2d1", "accent": "#e63946", "outline": "#0d1420" } },
+    { "id": "engineer",  "name": "Engineer",  "unlock": "default", "twitch": 1.00, "build": 1.02, "palette": { "skin": "#e5b183", "torso": "#f6a02a", "limbs": "#b06f14", "accent": "#2b3a55", "outline": "#0d1420" } },
+    { "id": "shadow",    "name": "Shadow",    "unlock": "default", "twitch": 1.06, "build": 0.99, "palette": { "skin": "#c98f63", "torso": "#2f3542", "limbs": "#1e222b", "accent": "#9b5de5", "outline": "#05070c" } },
+    { "id": "blaze",     "name": "Blaze",     "unlock": "default", "twitch": 1.02, "build": 1.00, "palette": { "skin": "#e0a878", "torso": "#ff6b35", "limbs": "#c24914", "accent": "#ffe066", "outline": "#0d1420" } },
+    { "id": "frost",     "name": "Frost",     "unlock": "default", "twitch": 0.98, "build": 1.00, "palette": { "skin": "#f4d6bd", "torso": "#5aa9e6", "limbs": "#3a7cae", "accent": "#e8f7ff", "outline": "#0d1420" } },
+    { "id": "nova",      "name": "Nova",      "unlock": "default", "twitch": 1.04, "build": 0.96, "palette": { "skin": "#f0c9a4", "torso": "#b06ab3", "limbs": "#7d4180", "accent": "#fcbf49", "outline": "#0d1420" } },
+    { "id": "ranger",    "name": "Ranger",    "unlock": "default", "twitch": 1.04, "build": 1.00, "palette": { "skin": "#dba97c", "torso": "#4d7c3f", "limbs": "#33552a", "accent": "#c9a227", "outline": "#0d1420" } },
+    { "id": "juggernaut","name": "Juggernaut","unlock": "default", "twitch": 0.86, "build": 1.18, "palette": { "skin": "#c78a5b", "torso": "#6b7280", "limbs": "#464d58", "accent": "#ef4444", "outline": "#0d1420" } },
+    { "id": "ghost",     "name": "Ghost",     "unlock": "default", "twitch": 1.08, "build": 0.95, "palette": { "skin": "#e9dccd", "torso": "#9ad5ca", "limbs": "#5c9c92", "accent": "#2b3a55", "outline": "#0d1420" } }
+  ]
+}

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MILOFIT Arena</string>
+    <string name="menu_play">Play</string>
+    <string name="menu_practice">Solo practice</string>
+    <string name="menu_name">Callsign</string>
+    <string name="menu_server">Server</string>
+    <string name="menu_room">Room</string>
+    <string name="menu_character">Character</string>
+    <string name="menu_team">Team</string>
+    <string name="hint_team_auto">Auto</string>
+    <string name="hint_team_red">Red</string>
+    <string name="hint_team_blue">Blue</string>
+    <string name="lobby_waiting">Waiting for players…</string>
+    <string name="lobby_starting">Match starting in %1$s</string>
+    <string name="lobby_start">Start match</string>
+    <string name="lobby_map">Arena</string>
+    <string name="lobby_mode">Mode</string>
+    <string name="hud_chat_hint">Message…</string>
+    <string name="hud_respawn">Respawning in %1$s</string>
+    <string name="hud_spectating">Spectating — the match will restart shortly</string>
+    <string name="conn_connecting">Connecting…</string>
+    <string name="conn_connected">Connected</string>
+    <string name="conn_disconnected">Disconnected — retrying…</string>
+    <string name="conn_closed">Offline</string>
+</resources>

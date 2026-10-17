@@ -1,0 +1,261 @@
+{
+  "$comment": "Original MILOFIT outpost map, translated from the user-provided playable map data into the shared authoritative map format. Unsupported ladders, hazards, destructible props, and standalone-game code are intentionally not imported.",
+  "id": "outpost",
+  "name": "Outpost",
+  "size": {
+    "width": 2400,
+    "height": 1350
+  },
+  "ambient": {
+    "sky": [
+      "#b8d2db",
+      "#dfece6"
+    ],
+    "grid": "#52665d",
+    "glow": "#9ab27a"
+  },
+  "spawnPoints": [
+    {
+      "x": 460,
+      "y": 460,
+      "team": "red"
+    },
+    {
+      "x": 830,
+      "y": 760,
+      "team": "red"
+    },
+    {
+      "x": 340,
+      "y": 760,
+      "team": "red"
+    },
+    {
+      "x": 1720,
+      "y": 340,
+      "team": "blue"
+    },
+    {
+      "x": 1560,
+      "y": 750,
+      "team": "blue"
+    },
+    {
+      "x": 2040,
+      "y": 750,
+      "team": "blue"
+    },
+    {
+      "x": 2050,
+      "y": 340,
+      "team": "blue"
+    },
+    {
+      "x": 1200,
+      "y": 760,
+      "team": "any"
+    },
+    {
+      "x": 1200,
+      "y": 360,
+      "team": "any"
+    }
+  ],
+  "flagBases": {
+    "red": {
+      "x": 460,
+      "y": 460
+    },
+    "blue": {
+      "x": 1720,
+      "y": 340
+    }
+  },
+  "solids": [
+    {
+      "x": 60,
+      "y": 550,
+      "w": 740,
+      "h": 55,
+      "type": "wall"
+    },
+    {
+      "x": 0,
+      "y": 550,
+      "w": 85,
+      "h": 800,
+      "type": "wall"
+    },
+    {
+      "x": 85,
+      "y": 840,
+      "w": 895,
+      "h": 65,
+      "type": "wall"
+    },
+    {
+      "x": 680,
+      "y": 605,
+      "w": 75,
+      "h": 90,
+      "type": "wall"
+    },
+    {
+      "x": 0,
+      "y": 905,
+      "w": 560,
+      "h": 445,
+      "type": "ground"
+    },
+    {
+      "x": 560,
+      "y": 1220,
+      "w": 400,
+      "h": 130,
+      "type": "wall"
+    },
+    {
+      "x": 675,
+      "y": 905,
+      "w": 305,
+      "h": 445,
+      "type": "wall"
+    },
+    {
+      "x": 975,
+      "y": 848,
+      "w": 95,
+      "h": 18,
+      "type": "platform",
+      "oneWay": true
+    },
+    {
+      "x": 1070,
+      "y": 862,
+      "w": 95,
+      "h": 18,
+      "type": "platform",
+      "oneWay": true
+    },
+    {
+      "x": 1165,
+      "y": 870,
+      "w": 110,
+      "h": 18,
+      "type": "platform",
+      "oneWay": true
+    },
+    {
+      "x": 1275,
+      "y": 862,
+      "w": 95,
+      "h": 18,
+      "type": "platform",
+      "oneWay": true
+    },
+    {
+      "x": 1370,
+      "y": 848,
+      "w": 95,
+      "h": 18,
+      "type": "platform",
+      "oneWay": true
+    },
+    {
+      "x": 960,
+      "y": 1265,
+      "w": 520,
+      "h": 85,
+      "type": "wall"
+    },
+    {
+      "x": 1460,
+      "y": 840,
+      "w": 940,
+      "h": 510,
+      "type": "ground"
+    },
+    {
+      "x": 2150,
+      "y": 660,
+      "w": 250,
+      "h": 35,
+      "type": "platform",
+      "oneWay": true
+    },
+    {
+      "x": 1620,
+      "y": 420,
+      "w": 780,
+      "h": 145,
+      "type": "wall"
+    },
+    {
+      "x": 1740,
+      "y": 565,
+      "w": 660,
+      "h": 110,
+      "type": "wall"
+    },
+    {
+      "x": 240,
+      "y": 710,
+      "w": 210,
+      "h": 20,
+      "type": "platform",
+      "oneWay": true
+    }
+  ],
+  "decorations": [
+    {
+      "type": "sign",
+      "x": 760,
+      "y": 510,
+      "text": "FORTRESS"
+    },
+    {
+      "type": "sign",
+      "x": 2000,
+      "y": 385,
+      "text": "NEST"
+    },
+    {
+      "type": "glow",
+      "x": 1220,
+      "y": 1200,
+      "radius": 230,
+      "color": "#83d06b",
+      "alpha": 0.11
+    },
+    {
+      "type": "girder",
+      "x": 975,
+      "y": 845,
+      "w": 490,
+      "color": "#5c4632"
+    }
+  ],
+  "pickups": [
+    {
+      "x": 1135,
+      "y": 780,
+      "type": "health"
+    },
+    {
+      "x": 350,
+      "y": 795,
+      "type": "ammo"
+    },
+    {
+      "x": 1850,
+      "y": 375,
+      "type": "weapon",
+      "weapon": "frag"
+    },
+    {
+      "x": 2060,
+      "y": 795,
+      "type": "health"
+    }
+  ]
+}

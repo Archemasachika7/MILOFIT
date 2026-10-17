@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Plain platform theme: the whole UI is Compose, and this avoids pulling in
+         the AppCompat/Material-View libraries we would otherwise not use. -->
+    <style name="Theme.Milofit" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/arena_bg</item>
+        <item name="android:statusBarColor">@color/arena_bg</item>
+        <item name="android:navigationBarColor">@color/arena_bg</item>
+        <!-- API 27+, and ignored before that: a landscape game should be allowed
+             to paint into a notch rather than being letterboxed by it. -->
+        <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="27">shortEdges</item>
+    </style>
+</resources>

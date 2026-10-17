@@ -1,0 +1,60 @@
+{
+  "$comment": "Original map. Tight interior with vertical shafts; punishes open-field play.",
+  "id": "foundry",
+  "name": "Foundry",
+  "size": { "width": 2000, "height": 1100 },
+  "ambient": { "sky": ["#1a1410", "#2e241a"], "grid": "#3a2c1e", "glow": "#ff9f1c" },
+  "spawnPoints": [
+    { "x": 140, "y": 960, "team": "red" },
+    { "x": 260, "y": 960, "team": "red" },
+    { "x": 1860, "y": 960, "team": "blue" },
+    { "x": 1740, "y": 960, "team": "blue" },
+    { "x": 1000, "y": 960, "team": "any" },
+    { "x": 1000, "y": 300, "team": "any" }
+  ],
+  "flagBases": {
+    "red": { "x": 140, "y": 960 },
+    "blue": { "x": 1860, "y": 960 }
+  },
+  "solids": [
+    { "x": 0, "y": 0, "w": 2000, "h": 40, "type": "wall" },
+    { "x": 0, "y": 0, "w": 40, "h": 1100, "type": "wall" },
+    { "x": 1960, "y": 0, "w": 40, "h": 1100, "type": "wall" },
+    { "x": 0, "y": 1000, "w": 2000, "h": 100, "type": "ground" },
+    { "x": 380, "y": 1000, "w": 60, "h": 340, "type": "wall" },
+    { "x": 1560, "y": 1000, "w": 60, "h": 340, "type": "wall" },
+    { "x": 380, "y": 660, "w": 260, "h": 24, "type": "ground" },
+    { "x": 1360, "y": 660, "w": 260, "h": 24, "type": "ground" },
+    { "x": 180, "y": 440, "w": 240, "h": 22, "type": "platform", "oneWay": true },
+    { "x": 1580, "y": 440, "w": 240, "h": 22, "type": "platform", "oneWay": true },
+    { "x": 640, "y": 460, "w": 180, "h": 22, "type": "platform", "oneWay": true },
+    { "x": 1180, "y": 460, "w": 180, "h": 22, "type": "platform", "oneWay": true },
+    { "x": 820, "y": 620, "w": 360, "h": 22, "type": "platform", "oneWay": true },
+    { "x": 900, "y": 380, "w": 200, "h": 22, "type": "platform", "oneWay": true },
+    { "x": 100, "y": 780, "w": 200, "h": 22, "type": "platform", "oneWay": true },
+    { "x": 1700, "y": 780, "w": 200, "h": 22, "type": "platform", "oneWay": true },
+    { "x": 940, "y": 240, "w": 120, "h": 22, "type": "platform", "oneWay": true },
+    { "x": 560, "y": 860, "w": 140, "h": 22, "type": "platform", "oneWay": true },
+    { "x": 1300, "y": 860, "w": 140, "h": 22, "type": "platform", "oneWay": true }
+  ],
+  "decorations": [
+    { "type": "girder", "x": 440, "y": 660, "w": 1120, "color": "#5c4632" },
+    { "type": "glow", "x": 1000, "y": 700, "radius": 300, "color": "#ff9f1c", "alpha": 0.09 },
+    { "type": "sign", "x": 1000, "y": 220, "text": "FOUNDRY" }
+  ],
+  "pickups": [
+    { "x": 1000, "y": 780, "type": "health" },
+    { "x": 720, "y": 600, "type": "ammo" },
+    { "x": 1280, "y": 600, "type": "ammo" },
+    { "x": 1000, "y": 360, "type": "shield" },
+    { "x": 260, "y": 420, "type": "weapon", "weapon": "bulldog" },
+    { "x": 1740, "y": 420, "type": "weapon", "weapon": "bulldog" },
+    { "x": 700, "y": 440, "type": "weapon", "weapon": "frag" },
+    { "x": 1300, "y": 440, "type": "weapon", "weapon": "frag" },
+    { "x": 1000, "y": 220, "type": "weapon", "weapon": "longshot" },
+    { "x": 160, "y": 760, "type": "weapon", "weapon": "flamer" },
+    { "x": 1840, "y": 760, "type": "weapon", "weapon": "flamer" },
+    { "x": 620, "y": 840, "type": "weapon", "weapon": "boomstick" },
+    { "x": 1380, "y": 840, "type": "weapon", "weapon": "boomstick" }
+  ]
+}

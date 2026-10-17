@@ -1,0 +1,20 @@
+{
+  "name": "milofit-arena",
+  "version": "1.0.0",
+  "private": true,
+  "description": "MILOFIT Arena — original jetpack arena shooter with web and Android clients sharing one authoritative server.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "npm --prefix server start",
+    "dev": "npm --prefix server run dev",
+    "install:server": "npm --prefix server install",
+    "test": "npm run test:sim && npm run test:smoke && npm run test:ctf && npm run test:web",
+    "test:sim": "node server/test/sim.js",
+    "test:smoke": "node server/test/smoke.js",
+    "test:ctf": "node server/test/ctf.js",
+    "test:web": "node web/test/client.js"
+  }
+}

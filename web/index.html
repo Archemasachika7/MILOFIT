@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="dark" />
+  <title>MILOFIT Arena</title>
+  <meta name="description" content="MILOFIT Arena — an original jetpack arena shooter for web and Android." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230d1420'/%3E%3Ccircle cx='16' cy='11' r='4' fill='%23ffd166'/%3E%3Cpath d='M16 15v9M16 18l-5-4M16 18l5-4M16 24l-4 5M16 24l4 5' stroke='%233f7fd6' stroke-width='2.5' stroke-linecap='round' fill='none'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <canvas id="game" aria-label="Game viewport"></canvas>
+
+  <!-- ---------------------------------------------------------------- HUD -->
+  <div id="hud" class="hidden">
+    <div id="topbar">
+      <div id="matchClock"><span id="clockValue">5:00</span><span id="scoreValue">0 — 0</span></div>
+      <div id="modeLabel"></div>
+      <button id="menuToggle" type="button" title="Menu">☰</button>
+    </div>
+
+    <div id="killfeed"></div>
+
+    <div id="chatlog"></div>
+    <form id="chatForm" autocomplete="off">
+      <input id="chatInput" type="text" maxlength="120" placeholder="Press Enter to chat" />
+    </form>
+
+    <div id="bottomBar">
+      <div id="vitals">
+        <div class="bar health"><div id="healthFill"></div><span id="healthText">100</span></div>
+        <div class="bar shield"><div id="shieldFill"></div><span id="shieldText">0</span></div>
+        <div class="bar jet"><div id="jetFill"></div><span id="jetText">JET</span></div>
+      </div>
+      <div id="weaponPanel">
+        <div id="weaponName">Sidearm</div>
+        <div id="ammoText">12 / 120</div>
+        <div id="slotList"></div>
+        <div id="grenadeCount">●●</div>
+      </div>
+    </div>
+
+    <div id="respawnOverlay" class="hidden">
+      <div class="respawn-title">You were fragged</div>
+      <div id="respawnTimer">3</div>
+    </div>
+
+    <div id="scoreboard" class="hidden"></div>
+    <div id="netStats"></div>
+  </div>
+
+  <!-- --------------------------------------------------------------- MENU -->
+  <div id="menu">
+    <div class="menu-card">
+      <header>
+        <div class="logo">
+          <svg viewBox="0 0 32 32" width="34" height="34" aria-hidden="true">
+            <rect width="32" height="32" rx="7" fill="#131d33" />
+            <circle cx="16" cy="11" r="4" fill="#ffd166" />
+            <path d="M16 15v9M16 18l-5-4M16 18l5-4M16 24l-4 5M16 24l4 5" stroke="#3f7fd6" stroke-width="2.5" stroke-linecap="round" fill="none" />
+          </svg>
+          <div>
+            <h1>MILOFIT <span>Arena</span></h1>
+            <p class="tagline">Original jetpack arena shooter — web &amp; Android, one server.</p>
+          </div>
+        </div>
+      </header>
+
+      <div class="menu-body">
+        <section class="col">
+          <label class="field">
+            <span>Callsign</span>
+            <input id="nameInput" type="text" maxlength="16" placeholder="Recruit" />
+          </label>
+
+          <label class="field">
+            <span>Server</span>
+            <input id="serverInput" type="text" spellcheck="false" />
+          </label>
+
+          <div class="row">
+            <label class="field">
+              <span>Room</span>
+              <input id="roomInput" type="text" maxlength="24" placeholder="Blank = create room; enter a code to join" />
+            </label>
+            <label class="field">
+              <span>Team</span>
+              <select id="teamSelect">
+                <option value="auto">Auto</option>
+                <option value="red">Red</option>
+                <option value="blue">Blue</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="row">
+            <label class="field">
+              <span>Arena</span>
+              <select id="mapSelect"></select>
+            </label>
+            <label class="field">
+              <span>Mode</span>
+              <select id="modeSelect"></select>
+            </label>
+          </div>
+
+          <div class="row">
+            <label class="field">
+              <span>Match size</span>
+              <select id="formatSelect">
+                <option value="1v1">1v1 Duel</option>
+                <option value="2v2">2v2 Duo</option>
+                <option value="4v4">4v4 Squad</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>Roles</span>
+              <select id="roleModeSelect">
+                <option value="roles">Roles (Raider default)</option>
+                <option value="free">No roles (attackers)</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="row">
+            <label class="field">
+              <span>Default role</span>
+              <select id="roleSelect">
+                <option value="raider">Raider</option>
+                <option value="commander">Commander</option>
+                <option value="scout">Scout</option>
+                <option value="breacher">Breacher</option>
+                <option value="medic">Medic</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>Gravity mutator</span>
+              <select id="gravitySelect">
+                <option value="normal">Normal</option>
+                <option value="lunar">Lunar</option>
+                <option value="zero">Zero-G</option>
+              </select>
+            </label>
+          </div>
+
+          <button id="playButton" class="primary" type="button">Play</button>
+          <button id="practiceButton" class="ghost" type="button">Practice offline</button>
+          <p id="menuStatus" class="status">Connecting…</p>
+        </section>
+
+        <section class="col">
+          <span class="section-label">Character</span>
+          <div id="characterGrid" class="character-grid"></div>
+          <div class="controls-help">
+            <span class="section-label">Controls</span>
+            <ul>
+              <li><b>A / D</b> move</li>
+              <li><b>W / Space</b> jump, hold to jetpack</li>
+              <li><b>Mouse</b> aim, <b>click</b> fire</li>
+              <li><b>Q</b> melee, <b>F</b> / right click grenade</li>
+              <li><b>1 / 2 / wheel</b> swap, <b>R</b> reload</li>
+              <li><b>Tab</b> scoreboard, <b>Enter</b> chat</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <div id="touchControls" class="hidden">
+    <div id="stickLeft" class="stick"><div class="knob"></div></div>
+    <div id="stickRight" class="stick"><div class="knob"></div></div>
+    <div id="touchButtons">
+      <button data-action="jet">JET</button>
+      <button data-action="melee">MELEE</button>
+      <button data-action="grenade">NADE</button>
+      <button data-action="reload">RELOAD</button>
+      <button data-action="switch">SWAP</button>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

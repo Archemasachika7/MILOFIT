@@ -1,0 +1,72 @@
+{
+  "$comment": "Manifest so server and clients can enumerate content without directory listing (Android assets cannot list reliably).",
+  "version": 1,
+  "game": {
+    "id": "milofit-arena",
+    "title": "MILOFIT Arena",
+    "tagline": "Jetpack arena shooter",
+    "protocolVersion": 1
+  },
+  "files": {
+    "tuning": "tuning.json",
+    "weapons": "weapons.json",
+    "characters": "characters.json"
+  },
+  "maps": [
+    "maps/arena_core.json",
+    "maps/foundry.json",
+    "maps/caverns.json",
+    "maps/outpost.json",
+    "maps/outpost_ridge.json"
+  ],
+  "modes": [
+    {
+      "id": "dm",
+      "name": "Deathmatch",
+      "description": "Free for all. Every player for themselves, first to the score limit wins.",
+      "teams": false,
+      "scorePerKill": 1,
+      "scorePerAssist": 0.25
+    },
+    {
+      "id": "tdm",
+      "name": "Team Deathmatch",
+      "description": "Red versus Blue. Shared team score.",
+      "teams": true,
+      "scorePerKill": 1,
+      "scorePerAssist": 0.25
+    },
+    {
+      "id": "ctf",
+      "name": "Capture the Flag",
+      "description": "Red versus Blue. Raid the enemy base, carry their flag home, and hold your own while you do it.",
+      "teams": true,
+      "scorePerKill": 1,
+      "scorePerAssist": 0.25,
+      "flags": true,
+      "teamScoreFromKills": false
+    }
+  ],
+  "pickupTypes": {
+    "health": {
+      "label": "Health",
+      "color": "#e63946",
+      "amount": 40
+    },
+    "shield": {
+      "label": "Shield",
+      "color": "#4cc9f0",
+      "amount": 35
+    },
+    "ammo": {
+      "label": "Ammo",
+      "color": "#ffd166",
+      "amount": 0
+    },
+    "weapon": {
+      "label": "Weapon",
+      "color": "#a8e063",
+      "amount": 0
+    }
+  }
+}

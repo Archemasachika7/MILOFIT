@@ -1,0 +1,229 @@
+{
+  "$comment": "Compact original MILOFIT outpost variant, translated from the second user-provided map draft into the shared authoritative map format. Standalone UI, classes, weapons, ladders, hazards, cover objects, and game code are not imported.",
+  "id": "outpost_ridge",
+  "name": "Outpost Ridge",
+  "size": {
+    "width": 1600,
+    "height": 900
+  },
+  "ambient": {
+    "sky": [
+      "#172824",
+      "#304337"
+    ],
+    "grid": "#53645b",
+    "glow": "#9ab27a"
+  },
+  "spawnPoints": [
+    {
+      "x": 300,
+      "y": 410,
+      "team": "red"
+    },
+    {
+      "x": 510,
+      "y": 625,
+      "team": "red"
+    },
+    {
+      "x": 100,
+      "y": 625,
+      "team": "red"
+    },
+    {
+      "x": 1350,
+      "y": 250,
+      "team": "blue"
+    },
+    {
+      "x": 1500,
+      "y": 250,
+      "team": "blue"
+    },
+    {
+      "x": 1180,
+      "y": 250,
+      "team": "blue"
+    },
+    {
+      "x": 800,
+      "y": 600,
+      "team": "any"
+    },
+    {
+      "x": 800,
+      "y": 400,
+      "team": "any"
+    }
+  ],
+  "flagBases": {
+    "red": {
+      "x": 300,
+      "y": 410
+    },
+    "blue": {
+      "x": 1350,
+      "y": 250
+    }
+  },
+  "solids": [
+    {
+      "x": 0,
+      "y": 450,
+      "w": 600,
+      "h": 48,
+      "type": "wall"
+    },
+    {
+      "x": 0,
+      "y": 675,
+      "w": 660,
+      "h": 52,
+      "type": "wall"
+    },
+    {
+      "x": 0,
+      "y": 727,
+      "w": 395,
+      "h": 173,
+      "type": "wall"
+    },
+    {
+      "x": 465,
+      "y": 727,
+      "w": 195,
+      "h": 173,
+      "type": "wall"
+    },
+    {
+      "x": 395,
+      "y": 865,
+      "w": 70,
+      "h": 35,
+      "type": "wall"
+    },
+    {
+      "x": 655,
+      "y": 682,
+      "w": 60,
+      "h": 14,
+      "type": "platform",
+      "oneWay": true
+    },
+    {
+      "x": 715,
+      "y": 694,
+      "w": 60,
+      "h": 14,
+      "type": "platform",
+      "oneWay": true
+    },
+    {
+      "x": 775,
+      "y": 700,
+      "w": 65,
+      "h": 14,
+      "type": "platform",
+      "oneWay": true
+    },
+    {
+      "x": 840,
+      "y": 694,
+      "w": 60,
+      "h": 14,
+      "type": "platform",
+      "oneWay": true
+    },
+    {
+      "x": 900,
+      "y": 682,
+      "w": 60,
+      "h": 14,
+      "type": "platform",
+      "oneWay": true
+    },
+    {
+      "x": 645,
+      "y": 855,
+      "w": 325,
+      "h": 45,
+      "type": "wall"
+    },
+    {
+      "x": 955,
+      "y": 675,
+      "w": 645,
+      "h": 225,
+      "type": "ground"
+    },
+    {
+      "x": 1110,
+      "y": 300,
+      "w": 490,
+      "h": 85,
+      "type": "wall"
+    },
+    {
+      "x": 1185,
+      "y": 385,
+      "w": 415,
+      "h": 290,
+      "type": "wall"
+    },
+    {
+      "x": 1115,
+      "y": 500,
+      "w": 75,
+      "h": 22,
+      "type": "platform",
+      "oneWay": true
+    }
+  ],
+  "decorations": [
+    {
+      "type": "sign",
+      "x": 450,
+      "y": 422,
+      "text": "FORTRESS"
+    },
+    {
+      "type": "sign",
+      "x": 1360,
+      "y": 273,
+      "text": "RIDGE"
+    },
+    {
+      "type": "glow",
+      "x": 800,
+      "y": 810,
+      "radius": 160,
+      "color": "#83d06b",
+      "alpha": 0.09
+    },
+    {
+      "type": "girder",
+      "x": 655,
+      "y": 685,
+      "w": 305,
+      "color": "#72583d"
+    }
+  ],
+  "pickups": [
+    {
+      "x": 765,
+      "y": 620,
+      "type": "health"
+    },
+    {
+      "x": 250,
+      "y": 635,
+      "type": "ammo"
+    },
+    {
+      "x": 1280,
+      "y": 260,
+      "type": "weapon",
+      "weapon": "frag"
+    }
+  ]
+}

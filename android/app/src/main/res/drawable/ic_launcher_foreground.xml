@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Vector-only launcher art: no PNGs ship with this project, which keeps the
+  "every asset is authored in-repo" rule easy to check. Adaptive-icon
+  foregrounds are 108dp with the inner 72dp treated as the safe zone.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- jetpack body -->
+    <path
+        android:fillColor="#2c3648"
+        android:pathData="M44,40 h6 v26 h-6 z" />
+
+    <!-- head -->
+    <path
+        android:fillColor="#f0c9a4"
+        android:pathData="M54,26 a7.5,7.5 0 1,0 0.1,0 z" />
+
+    <!-- helmet -->
+    <path
+        android:fillColor="#3f7fd6"
+        android:pathData="M46.4,30.5 a7.6,7.6 0 0,1 15.2,0 a7.6,7.6 0 0,1 -2.6,4.2 a7.6,7.6 0 0,0 -10,-0 z" />
+
+    <!-- torso -->
+    <path
+        android:fillColor="#3f7fd6"
+        android:pathData="M47.5,41 h13 v23 h-13 z" />
+
+    <!-- accent sash -->
+    <path
+        android:fillColor="#ffd166"
+        android:pathData="M47.5,47 l13,5 v3 l-13,-5 z" />
+
+    <!-- legs -->
+    <path
+        android:fillColor="#2b5aa0"
+        android:pathData="M48,64 h4.5 v15 h-4.5 z" />
+    <path
+        android:fillColor="#2b5aa0"
+        android:pathData="M55.5,64 h4.5 v15 h-4.5 z" />
+
+    <!-- jet flame -->
+    <path
+        android:fillColor="#ffb703"
+        android:pathData="M45.5,66 l4,-1 l-2,16 z" />
+    <path
+        android:fillColor="#fff3b0"
+        android:pathData="M46.5,67.5 l2.4,-0.6 l-1.2,9 z" />
+</vector>

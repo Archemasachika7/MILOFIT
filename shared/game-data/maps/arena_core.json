@@ -1,0 +1,67 @@
+{
+  "$comment": "Original map. Coordinates are pixels with Y pointing DOWN. Player origins are the centre of the AABB. 'oneWay' solids are jump-through platforms. 'oneWay' is only honoured when a body is moving downward and its feet were above the platform on the previous step.",
+  "id": "arena_core",
+  "name": "Arena Core",
+  "size": { "width": 2400, "height": 1200 },
+  "ambient": { "sky": ["#101a2e", "#1c2f4a"], "grid": "#22334f", "glow": "#4cc9f0" },
+  "spawnPoints": [
+    { "x": 170, "y": 1000, "team": "red" },
+    { "x": 320, "y": 1000, "team": "red" },
+    { "x": 170, "y": 860, "team": "red" },
+    { "x": 2230, "y": 1000, "team": "blue" },
+    { "x": 2080, "y": 1000, "team": "blue" },
+    { "x": 2230, "y": 860, "team": "blue" },
+    { "x": 600, "y": 1000, "team": "any" },
+    { "x": 1800, "y": 1000, "team": "any" },
+    { "x": 1200, "y": 400, "team": "any" }
+  ],
+  "flagBases": {
+    "red": { "x": 170, "y": 1000 },
+    "blue": { "x": 2230, "y": 1000 }
+  },
+  "solids": [
+    { "x": 0, "y": 0, "w": 2400, "h": 40, "type": "wall" },
+    { "x": 0, "y": 0, "w": 40, "h": 1200, "type": "wall" },
+    { "x": 2360, "y": 0, "w": 40, "h": 1200, "type": "wall" },
+    { "x": 0, "y": 1040, "w": 2400, "h": 160, "type": "ground" },
+    { "x": 1110, "y": 780, "w": 180, "h": 260, "type": "ground" },
+    { "x": 1180, "y": 440, "w": 40, "h": 340, "type": "wall" },
+    { "x": 700, "y": 940, "w": 90, "h": 100, "type": "ground" },
+    { "x": 1610, "y": 940, "w": 90, "h": 100, "type": "ground" },
+    { "x": 280, "y": 800, "w": 260, "h": 22, "type": "platform", "oneWay": true },
+    { "x": 1860, "y": 800, "w": 260, "h": 22, "type": "platform", "oneWay": true },
+    { "x": 420, "y": 560, "w": 220, "h": 22, "type": "platform", "oneWay": true },
+    { "x": 1760, "y": 560, "w": 220, "h": 22, "type": "platform", "oneWay": true },
+    { "x": 880, "y": 640, "w": 130, "h": 20, "type": "platform", "oneWay": true },
+    { "x": 1390, "y": 640, "w": 130, "h": 20, "type": "platform", "oneWay": true },
+    { "x": 980, "y": 440, "w": 200, "h": 22, "type": "platform", "oneWay": true },
+    { "x": 1220, "y": 440, "w": 200, "h": 22, "type": "platform", "oneWay": true },
+    { "x": 240, "y": 300, "w": 320, "h": 22, "type": "platform", "oneWay": true },
+    { "x": 1840, "y": 300, "w": 320, "h": 22, "type": "platform", "oneWay": true },
+    { "x": 40, "y": 920, "w": 200, "h": 22, "type": "platform", "oneWay": true },
+    { "x": 2160, "y": 920, "w": 200, "h": 22, "type": "platform", "oneWay": true },
+    { "x": 1040, "y": 900, "w": 120, "h": 22, "type": "platform", "oneWay": true },
+    { "x": 1240, "y": 900, "w": 120, "h": 22, "type": "platform", "oneWay": true }
+  ],
+  "decorations": [
+    { "type": "pylon", "x": 520, "y": 1040, "h": 190, "color": "#2b5aa0" },
+    { "type": "pylon", "x": 1880, "y": 1040, "h": 190, "color": "#8c3a33" },
+    { "type": "sign", "x": 1200, "y": 430, "text": "CORE" },
+    { "type": "glow", "x": 1200, "y": 700, "radius": 260, "color": "#4cc9f0", "alpha": 0.10 }
+  ],
+  "pickups": [
+    { "x": 900, "y": 700, "type": "health" },
+    { "x": 600, "y": 780, "type": "ammo" },
+    { "x": 1800, "y": 780, "type": "ammo" },
+    { "x": 1500, "y": 980, "type": "shield" },
+    { "x": 300, "y": 780, "type": "weapon", "weapon": "ripper" },
+    { "x": 2100, "y": 780, "type": "weapon", "weapon": "ripper" },
+    { "x": 470, "y": 540, "type": "weapon", "weapon": "boomstick" },
+    { "x": 1930, "y": 540, "type": "weapon", "weapon": "boomstick" },
+    { "x": 1200, "y": 420, "type": "weapon", "weapon": "longshot" },
+    { "x": 400, "y": 280, "type": "weapon", "weapon": "rocket" },
+    { "x": 2000, "y": 280, "type": "weapon", "weapon": "rocket" },
+    { "x": 940, "y": 620, "type": "weapon", "weapon": "shredder" },
+    { "x": 1460, "y": 620, "type": "weapon", "weapon": "shredder" }
+  ]
+}

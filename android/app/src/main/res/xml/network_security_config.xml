@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  The game server is normally reached over plain ws:// on a LAN address while
+  developing, and Android blocks cleartext traffic by default. Rather than
+  disabling the check globally, this file opts in only for the hosts you are
+  likely to use locally.
+
+  For a public deployment: serve the game over wss:// (TLS), then delete this
+  file and the android:networkSecurityConfig attribute in AndroidManifest.xml.
+-->
+<network-security-config>
+    <!-- Default: no cleartext, so a production wss:// endpoint is HTTPS-only. -->
+    <base-config cleartextTrafficPermitted="false" />
+
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">localhost</domain>
+        <domain includeSubdomains="true">127.0.0.1</domain>
+        <!-- 10.0.2.2 is the host machine as seen from the Android emulator. -->
+        <domain includeSubdomains="true">10.0.2.2</domain>
+    </domain-config>
+
+    <!--
+      Testing against a server on your own Wi-Fi (192.168.x.x / 10.x.x.x):
+      network-security-config matches exact hostnames, not subnets, so add your
+      machine's address as an extra <domain> line, e.g.
+
+        <domain includeSubdomains="false">192.168.1.42</domain>
+    -->
+</network-security-config>

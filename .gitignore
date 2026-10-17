@@ -1,0 +1,26 @@
+# ---------------------------------------------------------------- node
+node_modules/
+npm-debug.log*
+
+# ---------------------------------------------------------------- android
+# (android/.gitignore covers the Gradle project; these are belt-and-braces)
+.kotlin/
+local.properties
+*.apk
+*.aab
+*.iml
+.idea/
+captures/
+
+# ---------------------------------------------------------------- agent tooling
+# Harness skills used during development — not part of the game.
+.agents/
+
+# ---------------------------------------------------------------- os junk
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# ---------------------------------------------------------------- scratch
+*.tmp.mjs
+livecheck.tmp.mjs

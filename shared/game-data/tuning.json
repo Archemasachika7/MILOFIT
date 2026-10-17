@@ -1,0 +1,95 @@
+{
+  "$comment": "Shared simulation constants. The server and both clients MUST use these values or client-side prediction will drift.",
+  "version": 1,
+  "tickRate": 60,
+  "snapshotRate": 20,
+  "limits": {
+    "maxPlayersPerRoom": 12,
+    "roomCodeLength": 6,
+    "nameMaxLength": 16,
+    "chatMaxLength": 120,
+    "chatCooldownSeconds": 1.5
+  },
+  "player": {
+    "width": 30,
+    "height": 46,
+    "gravity": 2000,
+    "runSpeed": 285,
+    "airControl": 0.55,
+    "jumpVelocity": -620,
+    "maxFallSpeed": 1500,
+    "maxHealth": 100,
+    "maxShield": 50,
+    "shieldDecayPerSecond": 0,
+    "respawnSeconds": 3,
+    "spawnProtectionSeconds": 1.5,
+    "selfDamageFactor": 0.4,
+    "friendlyFire": false
+  },
+  "jetpack": {
+    "maxFuel": 100,
+    "drainPerSecond": 44,
+    "rechargePerSecond": 26,
+    "rechargeDelaySeconds": 0.45,
+    "thrust": -2200,
+    "maxUpSpeed": -540,
+    "horizontalThrust": 340
+  },
+  "grenades": {
+    "maxCarried": 2,
+    "rechargeSeconds": 7,
+    "throwSpeed": 640,
+    "throwUpBias": -180,
+    "fuseSeconds": 1.9,
+    "radius": 130,
+    "damage": 65
+  },
+  "melee": {
+    "cooldownSeconds": 0.5,
+    "range": 62,
+    "halfAngleDeg": 55,
+    "damageBonus": 0
+  },
+  "pickups": {
+    "healthAmount": 40,
+    "shieldAmount": 35,
+    "ammoRefillFactor": 0.6,
+    "respawnSeconds": 12
+  },
+  "ctf": {
+    "captureLimit": 3,
+    "returnSeconds": 20,
+    "pickupRadius": 34,
+    "captureRadius": 46
+  },
+  "gravityModes": {
+    "normal": 1.0,
+    "lunar": 0.3157894737,
+    "zero": -0.1052631579
+  },
+  "matchFormats": {
+    "1v1": { "teamSize": 1, "maxPlayers": 2, "scoreLimit": 10, "timeLimitSeconds": 180, "respawnSeconds": 2.5 },
+    "2v2": { "teamSize": 2, "maxPlayers": 4, "scoreLimit": 25, "timeLimitSeconds": 300, "respawnSeconds": 3 },
+    "4v4": { "teamSize": 4, "maxPlayers": 8, "scoreLimit": 30, "timeLimitSeconds": 300, "respawnSeconds": 5 }
+  },
+  "roles": {
+    "raider": { "name": "Raider", "maxHealth": 100, "runSpeed": 285, "jetpackMax": 100, "jetDrainScale": 1.0 },
+    "commander": { "name": "Commander", "maxHealth": 115, "runSpeed": 270, "jetpackMax": 100, "jetDrainScale": 1.0 },
+    "scout": { "name": "Scout", "maxHealth": 95, "runSpeed": 300, "jetpackMax": 115, "jetDrainScale": 0.9 },
+    "breacher": { "name": "Breacher", "maxHealth": 145, "runSpeed": 245, "jetpackMax": 95, "jetDrainScale": 1.1 },
+    "medic": { "name": "Medic", "maxHealth": 105, "runSpeed": 280, "jetpackMax": 105, "jetDrainScale": 1.0 },
+    "attacker": { "name": "Attacker", "maxHealth": 100, "runSpeed": 285, "jetpackMax": 100, "jetDrainScale": 1.0 }
+  },
+  "net": {
+    "interpDelayMs": 110,
+    "reconcilePx": 26,
+    "inputBufferSize": 24,
+    "maxInputsPerMessage": 8
+  },
+  "match": {
+    "scoreLimit": 25,
+    "timeLimitSeconds": 300,
+    "warmupCountdownSeconds": 5,
+    "postMatchSeconds": 10
+  }
+}

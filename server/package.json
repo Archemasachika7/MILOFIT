@@ -1,0 +1,20 @@
+{
+  "name": "milofit-arena-server",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Authoritative multiplayer server for MILOFIT Arena (web + Android clients).",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "test:sim": "node test/sim.js",
+    "test:smoke": "node test/smoke.js",
+    "test:all": "node test/sim.js && node test/smoke.js"
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
+  }
+}

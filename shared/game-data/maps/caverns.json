@@ -1,0 +1,67 @@
+{
+  "$comment": "Original map. Long horizontal sightlines above, winding tunnels below, one central chimney.",
+  "id": "caverns",
+  "name": "Caverns",
+  "size": { "width": 2600, "height": 1300 },
+  "ambient": { "sky": ["#0b1020", "#17223b"], "grid": "#1d2b47", "glow": "#9b5de5" },
+  "spawnPoints": [
+    { "x": 150, "y": 1180, "team": "red" },
+    { "x": 300, "y": 1180, "team": "red" },
+    { "x": 2450, "y": 1180, "team": "blue" },
+    { "x": 2300, "y": 1180, "team": "blue" },
+    { "x": 1500, "y": 640, "team": "any" },
+    { "x": 1300, "y": 180, "team": "any" }
+  ],
+  "flagBases": {
+    "red": { "x": 150, "y": 1180 },
+    "blue": { "x": 2450, "y": 1180 }
+  },
+  "solids": [
+    { "x": 0, "y": 0, "w": 2600, "h": 40, "type": "wall" },
+    { "x": 0, "y": 0, "w": 40, "h": 1300, "type": "wall" },
+    { "x": 2560, "y": 0, "w": 40, "h": 1300, "type": "wall" },
+    { "x": 0, "y": 1220, "w": 2600, "h": 80, "type": "ground" },
+    { "x": 0, "y": 820, "w": 720, "h": 26, "type": "ground" },
+    { "x": 1880, "y": 820, "w": 720, "h": 26, "type": "ground" },
+    { "x": 1240, "y": 300, "w": 120, "h": 620, "type": "ground" },
+    { "x": 40, "y": 1080, "w": 240, "h": 22, "type": "platform", "oneWay": true },
+    { "x": 2320, "y": 1080, "w": 240, "h": 22, "type": "platform", "oneWay": true },
+    { "x": 340, "y": 1080, "w": 220, "h": 22, "type": "platform", "oneWay": true },
+    { "x": 2040, "y": 1080, "w": 220, "h": 22, "type": "platform", "oneWay": true },
+    { "x": 760, "y": 700, "w": 200, "h": 22, "type": "platform", "oneWay": true },
+    { "x": 1640, "y": 700, "w": 200, "h": 22, "type": "platform", "oneWay": true },
+    { "x": 900, "y": 520, "w": 160, "h": 22, "type": "platform", "oneWay": true },
+    { "x": 1540, "y": 520, "w": 160, "h": 22, "type": "platform", "oneWay": true },
+    { "x": 400, "y": 420, "w": 260, "h": 22, "type": "platform", "oneWay": true },
+    { "x": 1940, "y": 420, "w": 260, "h": 22, "type": "platform", "oneWay": true },
+    { "x": 1000, "y": 300, "w": 240, "h": 22, "type": "platform", "oneWay": true },
+    { "x": 1360, "y": 300, "w": 240, "h": 22, "type": "platform", "oneWay": true },
+    { "x": 200, "y": 220, "w": 320, "h": 22, "type": "platform", "oneWay": true },
+    { "x": 2080, "y": 220, "w": 320, "h": 22, "type": "platform", "oneWay": true },
+    { "x": 1100, "y": 140, "w": 400, "h": 22, "type": "platform", "oneWay": true }
+  ],
+  "decorations": [
+    { "type": "stalactite", "x": 600, "y": 40, "h": 180, "color": "#243352" },
+    { "type": "stalactite", "x": 1400, "y": 40, "h": 140, "color": "#243352" },
+    { "type": "stalactite", "x": 2000, "y": 40, "h": 160, "color": "#243352" },
+    { "type": "glow", "x": 1300, "y": 700, "radius": 340, "color": "#9b5de5", "alpha": 0.12 },
+    { "type": "sign", "x": 1300, "y": 120, "text": "CAVERNS" }
+  ],
+  "pickups": [
+    { "x": 1300, "y": 200, "type": "health" },
+    { "x": 1300, "y": 960, "type": "health" },
+    { "x": 560, "y": 1060, "type": "ammo" },
+    { "x": 2040, "y": 1060, "type": "ammo" },
+    { "x": 1180, "y": 700, "type": "shield" },
+    { "x": 620, "y": 400, "type": "weapon", "weapon": "bulldog" },
+    { "x": 1980, "y": 400, "type": "weapon", "weapon": "bulldog" },
+    { "x": 1040, "y": 280, "type": "weapon", "weapon": "ripper" },
+    { "x": 1560, "y": 280, "type": "weapon", "weapon": "ripper" },
+    { "x": 1300, "y": 120, "type": "weapon", "weapon": "longshot" },
+    { "x": 860, "y": 500, "type": "weapon", "weapon": "rocket" },
+    { "x": 1740, "y": 500, "type": "weapon", "weapon": "rocket" },
+    { "x": 280, "y": 200, "type": "weapon", "weapon": "shredder" },
+    { "x": 2320, "y": 200, "type": "weapon", "weapon": "shredder" },
+    { "x": 1420, "y": 800, "type": "weapon", "weapon": "frag" }
+  ]
+}
