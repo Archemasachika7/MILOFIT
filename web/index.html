@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MILOFIT - Original 2D Shooter</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #0d1117; color: #e6edf3; font-family: system-ui, sans-serif; }
+  #wrap { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; gap: 8px; }
+  canvas { background: #1b2433; border: 2px solid #30363d; max-width: 100%; height: auto; touch-action: none; }
+  #hud { font-size: 14px; opacity: .85; }
+  #menu { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
+  button, select { background: #21262d; color: #e6edf3; border: 1px solid #30363d; padding: 6px 12px; border-radius: 6px; cursor: pointer; }
+  button:hover { background: #30363d; }
+</style>
+</head>
+<body>
+<div id="wrap">
+  <div id="menu">
+    <select id="map"></select>
+    <select id="weapon"></select>
+    <button id="restart">Restart</button>
+  </div>
+  <canvas id="game" width="960" height="540"></canvas>
+  <div id="hud">WASD/Arrows: move &middot; W/Space: jump (hold for jetpack) &middot; Mouse: aim &middot; Click/hold: fire &middot; R: reload &middot; 1-3: weapons</div>
+</div>
+<script src="maps.js"></script>
+<script src="weapons.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
